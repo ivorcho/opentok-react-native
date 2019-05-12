@@ -632,7 +632,7 @@ public class OTSessionManager extends ReactContextBaseJavaModule
             subscriberInfo.putMap("stream", EventUtils.prepareJSStreamMap(mStream));
             sendEventMap(this.getReactApplicationContext(), subscriberPreface +  "onDisconnected", subscriberInfo);
         }
-        printLogs("onDisconnected: Subscriber disconnected. Stream: "+subscriberKit.getStream().getStreamId());
+        printLogs("onDisconnected: Subscriber disconnected. Stream: "+streamId);
     }
 
     @Override
