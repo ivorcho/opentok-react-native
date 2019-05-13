@@ -455,7 +455,8 @@ public class OTSessionManager extends ReactContextBaseJavaModule
         }
         WritableMap errorInfo = EventUtils.prepareJSErrorMap(opentokError);
         sendEventMap(this.getReactApplicationContext(), sessionPreface + "onError", errorInfo);
-        printLogs("There was an error");
+        printLogs("onError: "+opentokError.getErrorDomain() + " : " +
+                opentokError.getErrorCode() +  " - "+opentokError.getMessage());
     }
 
     @Override
